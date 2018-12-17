@@ -192,6 +192,7 @@ Source: "..\..\..\..\install\bin\stylesheets\*"; DestDir: "{app}\stylesheets"; F
 
 [Registry]
 Root: "HKCU"; Subkey: "Software\Classes\nxm\shell\open\command"; ValueType: string; ValueData: """{app}\nxmhandler.exe"" ""%1"""; Flags: createvalueifdoesntexist deletevalue uninsclearvalue; Components: Nexus; AfterInstall: WriteNexusHandlerINI('{localappdata}\ModOrganizer\nxmhandler.ini', '{app}\{#MyAppExeName}')
+Root: "HKCU"; Subkey: "Software\Classes\nxm"; ValueType: string; ValueName: "URL Protocol"; Flags: createvalueifdoesntexist deletevalue uninsclearvalue; Components: Nexus; 
 
 [InstallDelete]
 Type: filesandordirs; Name: "{app}/DLLS"
