@@ -191,7 +191,7 @@ Source: "..\..\..\..\install\bin\tutorials\*"; DestDir: "{app}\tutorials"; Flags
 Source: "..\..\..\..\install\bin\stylesheets\*"; DestDir: "{app}\stylesheets"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Stylesheets
 
 [Registry]
-Root: "HKCU"; Subkey: "Software\Classes\nxm\shell\open\command"; ValueType: string; ValueData: "{app}\\nxmhandler.exe ""%1"""; Flags: createvalueifdoesntexist deletevalue uninsclearvalue
+Root: "HKCU"; Subkey: "Software\Classes\nxm\shell\open\command"; ValueType: string; ValueData: """{app}\nxmhandler.exe"" ""%1"""; Flags: createvalueifdoesntexist deletevalue uninsclearvalue; Components: Nexus; AfterInstall: WriteNexusHandlerINI('{localappdata}\ModOrganizer\nxmhandler.ini', '{app}\{#MyAppExeName}')
 
 [InstallDelete]
 Type: filesandordirs; Name: "{app}/DLLS"
@@ -303,5 +303,26 @@ begin
     Rev := LS shr 16;
     Build := LS and $FFFF;
     Version := Format('%d.%d.%d', [Major, Minor, Rev]);
+  end
+end;
+
+procedure WriteNexusHandlerINI(const Filename: String; const Handler: String);
+var
+  Written: Boolean;
+  Output, FixedHandler: String;
+begin
+  FixedHandler := ExpandConstant(Handler);
+  StringChangeEx(FixedHandler, '\', '\\', True);
+  Output :=          '[handlers]'                          + #10#13;
+  Output := Output + 'size=1'                              + #10#13;
+  Output := Output + '1\games='                            + #10#13;
+  Output := Output + '1\executable="' + FixedHandler + '"' + #10#13;
+  if IsComponentSelected('Nexus') then
+  begin
+    Written := SaveStringToFile(ExpandConstant(Filename), Output, False);
+    if not Written then
+    begin
+      MsgBox('Unable to write ' + ExpandConstant(Filename), mbError, MB_OK);
+    end
   end
 end;
