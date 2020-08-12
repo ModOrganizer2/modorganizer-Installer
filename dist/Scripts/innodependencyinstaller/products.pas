@@ -177,7 +177,6 @@ var
 	i: Integer;
 	s: string;
 	ResultCode: Integer;
-	DefenderFailure: boolean;
 begin
 	delayedReboot := false;
 
@@ -204,34 +203,12 @@ begin
 	// If we were using InnoSetup 6, we could add a function in our main install script
 	// using <event('PrepareToInstall')>.
 	if IsComponentSelected('Exclusions') then begin
-		DefenderFailure := false
-		Exec('powershell.exe', ExpandConstant('Add-MpPreference -ExclusionPath "{app}"'), '', SW_HIDE, ewWaitUntilTerminated, ResultCode)
-		if ResultCode <> 0 then begin
-			DefenderFailure := true;
-			end;
-		Exec('powershell.exe', ExpandConstant('Add-MpPreference -ExclusionPath "{localappdata}\ModOrganizer"'), '', SW_HIDE, ewWaitUntilTerminated, ResultCode)
-		if ResultCode <> 0 then begin
-			DefenderFailure := true;
-			end;
+		Exec('powershell.exe', ExpandConstant('Add-MpPreference -ExclusionPath "\"{app}\""'), '', SW_HIDE, ewWaitUntilTerminated, ResultCode)
+		Exec('powershell.exe', ExpandConstant('Add-MpPreference -ExclusionPath "\"{localappdata}\ModOrganizer\""'), '', SW_HIDE, ewWaitUntilTerminated, ResultCode)
 		Exec('powershell.exe', 'Add-MpPreference -ExclusionProcess "ModOrganizer.exe"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode)
-		if ResultCode <> 0 then begin
-			DefenderFailure := true;
-			end;
 		Exec('powershell.exe', 'Add-MpPreference -ExclusionProcess "usvfs_proxy_x86.exe"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode)
-		if ResultCode <> 0 then begin
-			DefenderFailure := true;
-			end;
 		Exec('powershell.exe', 'Add-MpPreference -ExclusionProcess "usvfs_proxy_x64.exe"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode)
-		if ResultCode <> 0 then begin
-			DefenderFailure := true;
-			end;
 		Exec('powershell.exe', 'Add-MpPreference -ExclusionProcess "nxmhandler.exe"', '', SW_HIDE, ewWaitUntilTerminated, ResultCode)
-		if ResultCode <> 0 then begin
-			DefenderFailure := true;
-			end;
-		if DefenderFailure <> false then begin
-			Result := 'Windows Defender Exclusions';
-			end;
 	end;
 end;
 
