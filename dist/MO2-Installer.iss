@@ -106,15 +106,16 @@ Source: "..\..\..\..\install\bin\plugins\diagnose_basic.dll"; DestDir: "{app}\pl
 Source: "..\..\..\..\install\bin\plugins\inibakery.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
 Source: "..\..\..\..\install\bin\plugins\installer_bundle.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
 Source: "..\..\..\..\install\bin\licenses\*"; DestDir: "{app}\licenses"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
-Source: "..\..\..\..\install\bin\QtQuick.2\*"; DestDir: "{app}\QtQuick.2"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
-Source: "..\..\..\..\install\bin\platforms\*"; DestDir: "{app}\platforms"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
+Source: "..\..\..\..\install\bin\dlls\QtQml\*"; DestDir: "{app}\dlls\QtQml"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
+Source: "..\..\..\..\install\bin\dlls\QtQuick.2\*"; DestDir: "{app}\dlls\QtQuick.2"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
+Source: "..\..\..\..\install\bin\dlls\platforms\*"; DestDir: "{app}\dlls\platforms"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
 Source: "..\..\..\..\install\bin\dlls\7z.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
 Source: "..\..\..\..\install\bin\dlls\archive.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
 Source: "..\..\..\..\install\bin\dlls\libcrypto-1_1-x64.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
 Source: "..\..\..\..\install\bin\dlls\liblz4.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
 Source: "..\..\..\..\install\bin\dlls\libssl-1_1-x64.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
 Source: "..\..\..\..\install\bin\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
-Source: "..\..\..\..\install\bin\styles\*"; DestDir: "{app}\styles"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
+Source: "..\..\..\..\install\bin\dlls\styles\*"; DestDir: "{app}\dlls\styles"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
 ;QT DLLS
 Source: "..\..\..\..\install\bin\dlls\imageformats\*"; DestDir: "{app}\dlls\imageformats"; Flags: ignoreversion createallsubdirs recursesubdirs
 Source: "..\..\..\..\install\bin\dlls\Qt5Core.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
@@ -220,6 +221,7 @@ Type: filesandordirs; Name: "{app}/licenses"
 Type: filesandordirs; Name: "{app}/loot"
 Type: filesandordirs; Name: "{app}/NCC"
 Type: filesandordirs; Name: "{app}/platforms"
+Type: filesandordirs; Name: "{app}/QtQml"
 Type: filesandordirs; Name: "{app}/QtQuick.2"
 Type: filesandordirs; Name: "{app}/resources"
 Type: filesandordirs; Name: "{app}/styles"
