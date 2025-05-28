@@ -87,7 +87,7 @@ Name: "Exclusions"; Description: "Add Windows Defender Exclusions"; Types: Custo
 
 [Files]
 ;Core Files
-Source: "..\..\..\install\bin\archive.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\archive.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\..\..\install\bin\dump_running_process.bat"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\..\..\install\bin\helper.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\..\..\install\bin\ModOrganizer.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
