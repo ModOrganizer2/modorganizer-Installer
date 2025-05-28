@@ -1,6 +1,6 @@
 ; MO2 config
-#define MO2Exe "..\..\..\..\install\bin\ModOrganizer.exe"
-#define MO2Folder "..\..\..\..\install\installer"
+#define MO2Exe "..\..\..\install\bin\ModOrganizer.exe"
+#define MO2Folder "..\..\..\install\installer"
 
 #define MyAppName "Mod Organizer"
 #define MyAppVersion GetFileVersion(MO2Exe)

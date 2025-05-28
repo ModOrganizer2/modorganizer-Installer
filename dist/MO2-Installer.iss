@@ -27,7 +27,7 @@ DefaultDirName={sd}\Modding\MO2
 DirExistsWarning=no
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=..\..\..\..\install\bin\licenses\GPL-v3.0.txt
+LicenseFile=..\..\..\install\bin\licenses\GPL-v3.0.txt
 OutputDir={#MO2Folder}
 OutputBaseFilename=Mod.Organizer-{#MyAppVersionString}
 SetupIconFile=.\Images\mo_icon.ico
@@ -87,118 +87,112 @@ Name: "Exclusions"; Description: "Add Windows Defender Exclusions"; Types: Custo
 
 [Files]
 ;Core Files
-Source: "..\..\..\..\install\bin\dump_running_process.bat"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\helper.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\libcrypto-3-x64.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\libssl-3-x64.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\ModOrganizer.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\nxmhandler.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\QtWebEngineProcess.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\uibase.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\usvfs_proxy_x64.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\usvfs_proxy_x86.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\usvfs_x64.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\usvfs_x86.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\loot\loot.dll"; DestDir: "{app}\loot"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\loot\lootcli.exe"; DestDir: "{app}\loot"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\plugins\bsa_extractor.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\plugins\diagnose_basic.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\plugins\inibakery.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\plugins\installer_bundle.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\licenses\*"; DestDir: "{app}\licenses"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
-Source: "..\..\..\..\install\bin\qml\QtQml\*"; DestDir: "{app}\qml\QtQml"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
-Source: "..\..\..\..\install\bin\qml\QtQuick\*"; DestDir: "{app}\qml\QtQuick"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
-Source: "..\..\..\..\install\bin\platforms\*"; DestDir: "{app}\platforms"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
-Source: "..\..\..\..\install\bin\dlls\7z.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\dlls\archive.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\dlls\libcrypto-3-x64.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\dlls\liblz4.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\dlls\libssl-3-x64.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
-Source: "..\..\..\..\install\bin\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
-Source: "..\..\..\..\install\bin\styles\*"; DestDir: "{app}\styles"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
+Source: "..\..\..\install\bin\archive.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\dump_running_process.bat"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\helper.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\ModOrganizer.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\nxmhandler.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\QtWebEngineProcess.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\uibase.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\usvfs_proxy_x64.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\usvfs_proxy_x86.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\usvfs_x64.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\usvfs_x86.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\loot\loot.dll"; DestDir: "{app}\loot"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\loot\lootcli.exe"; DestDir: "{app}\loot"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\plugins\bsa_extractor.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\plugins\diagnose_basic.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\plugins\inibakery.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\plugins\installer_bundle.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\licenses\*"; DestDir: "{app}\licenses"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
+Source: "..\..\..\install\bin\qml\QtQml\*"; DestDir: "{app}\qml\QtQml"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
+Source: "..\..\..\install\bin\qml\QtQuick\*"; DestDir: "{app}\qml\QtQuick"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
+Source: "..\..\..\install\bin\platforms\*"; DestDir: "{app}\platforms"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
+Source: "..\..\..\install\bin\dlls\7zip.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\resources\*"; DestDir: "{app}\resources"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
+Source: "..\..\..\install\bin\styles\*"; DestDir: "{app}\styles"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
 ;QT DLLS
-Source: "..\..\..\..\install\bin\dlls\imageformats\*"; DestDir: "{app}\dlls\imageformats"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: QTDLL
-Source: "..\..\..\..\install\bin\dlls\tls\*"; DestDir: "{app}\dlls\tls"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: QTDLL
-Source: "..\..\..\..\install\bin\dlls\Qt*.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
-Source: "..\..\..\..\install\bin\dlls\d3dcompiler_47.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
-Source: "..\..\..\..\install\bin\dlls\dlls.manifest"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
-Source: "..\..\..\..\install\bin\dlls\opengl32sw.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
-Source: "..\..\..\..\install\bin\dlls\dxcompiler.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
-Source: "..\..\..\..\install\bin\dlls\dxil.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
-Source: "..\..\..\..\install\bin\dlls\QtWebEngineProcess.exe"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
+Source: "..\..\..\install\bin\dlls\imageformats\*"; DestDir: "{app}\dlls\imageformats"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: QTDLL
+Source: "..\..\..\install\bin\dlls\tls\*"; DestDir: "{app}\dlls\tls"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: QTDLL
+Source: "..\..\..\install\bin\dlls\Qt*.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
+Source: "..\..\..\install\bin\dlls\d3dcompiler_47.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
+Source: "..\..\..\install\bin\dlls\dlls.manifest"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
+Source: "..\..\..\install\bin\dlls\opengl32sw.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
+Source: "..\..\..\install\bin\dlls\dxcompiler.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
+Source: "..\..\..\install\bin\dlls\dxil.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
 
 ;Explorer++
-Source: "..\..\..\..\install\bin\explorer++\*"; DestDir: "{app}\explorer++"; Flags: ignoreversion; Components: FileExplorer
+Source: "..\..\..\install\bin\explorer++\*"; DestDir: "{app}\explorer++"; Flags: ignoreversion; Components: FileExplorer
 ;Start Plugin Groups
 ;Manual Installer
-Source: "..\..\..\..\install\bin\plugins\installer_manual.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\Manual
+Source: "..\..\..\install\bin\plugins\installer_manual.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\Manual
 ;Quick Installer
-Source: "..\..\..\..\install\bin\plugins\installer_quick.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\Quick
+Source: "..\..\..\install\bin\plugins\installer_quick.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\Quick
 ;BAIN Installer
-Source: "..\..\..\..\install\bin\plugins\installer_bain.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\Bain
-Source: "..\..\..\..\install\bin\plugins\installer_wizard\*"; DestDir: "{app}\plugins\installer_wizard"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Plugins\Bain
+Source: "..\..\..\install\bin\plugins\installer_bain.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\Bain
+Source: "..\..\..\install\bin\plugins\installer_wizard\*"; DestDir: "{app}\plugins\installer_wizard"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Plugins\Bain
 ;FOMOD Installer
-Source: "..\..\..\..\install\bin\plugins\installer_fomod.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\FOMOD
+Source: "..\..\..\install\bin\plugins\installer_fomod.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\FOMOD
 ;FOMOD C# Installer
-Source: "..\..\..\..\install\bin\plugins\installer_fomod_csharp.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\FOMOD
+Source: "..\..\..\install\bin\plugins\installer_fomod_csharp.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\FOMOD
 ;OMOD Installer
-Source: "..\..\..\..\install\bin\plugins\installer_omod\*"; DestDir: "{app}\plugins\installer_omod"; Flags: ignoreversion; Components: Plugins\OMOD
+Source: "..\..\..\install\bin\plugins\installer_omod\*"; DestDir: "{app}\plugins\installer_omod"; Flags: ignoreversion; Components: Plugins\OMOD
 ;NCC Installer
-; Source: "..\..\..\..\install\bin\NCC\*"; DestDir: "{app}\NCC"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Plugins\NCC
-; Source: "..\..\..\..\install\bin\plugins\installer_ncc.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\NCC
+; Source: "..\..\..\install\bin\NCC\*"; DestDir: "{app}\NCC"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Plugins\NCC
+; Source: "..\..\..\install\bin\plugins\installer_ncc.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\NCC
 ;Python Support
-Source: "..\..\..\..\install\bin\plugins\plugin_python\*"; DestDir: "{app}\plugins\plugin_python"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Plugins\Python
+Source: "..\..\..\install\bin\plugins\plugin_python\*"; DestDir: "{app}\plugins\plugin_python"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Plugins\Python
 ;Legacy ini editor
-Source: "..\..\..\..\install\bin\plugins\inieditor.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\LegacyINI
+Source: "..\..\..\install\bin\plugins\inieditor.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\LegacyINI
 ;FNIS Checker
-Source: "..\..\..\..\install\bin\plugins\check_fnis.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\FNISCheck
+Source: "..\..\..\install\bin\plugins\check_fnis.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\FNISCheck
 ;Configurator
-Source: "..\..\..\..\install\bin\plugins\pyCfg.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\Configurator
+Source: "..\..\..\install\bin\plugins\pyCfg.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\Configurator
 ;File Preview
-Source: "..\..\..\..\install\bin\plugins\preview_base.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\File
+Source: "..\..\..\install\bin\plugins\preview_base.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\File
 ;Preview BSA
-Source: "..\..\..\..\install\bin\plugins\preview_bsa.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\File
+Source: "..\..\..\install\bin\plugins\preview_bsa.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\File
 ;Game Support
-Source: "..\..\..\..\install\bin\plugins\game_enderal.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_enderalse.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_fallout3.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_fallout4.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_fallout4vr.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_fallout76.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_falloutNV.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_fo4london.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_morrowind.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_nehrim.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_oblivion.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_skyrim.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_skyrimse.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_skyrimvr.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_starfield.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\game_ttw.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
-Source: "..\..\..\..\install\bin\plugins\basic_games\*"; DestDir: "{app}\plugins\basic_games"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_enderal.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_enderalse.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_fallout3.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_fallout4.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_fallout4vr.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_fallout76.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_falloutNV.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_fo4london.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_morrowind.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_nehrim.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_oblivion.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_skyrim.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_skyrimse.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_skyrimvr.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_starfield.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\game_ttw.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\GameSupport
+Source: "..\..\..\install\bin\plugins\basic_games\*"; DestDir: "{app}\plugins\basic_games"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Plugins\GameSupport
 ;FNIS Patches
-Source: "..\..\..\..\install\bin\plugins\FNISPatches.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\FNISPatches
+Source: "..\..\..\install\bin\plugins\FNISPatches.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\FNISPatches
 ;FNIS Tool
-Source: "..\..\..\..\install\bin\plugins\FNISTool.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\FNISTool
-Source: "..\..\..\..\install\bin\plugins\FNISToolReset.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\FNISTool
+Source: "..\..\..\install\bin\plugins\FNISTool.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\FNISTool
+Source: "..\..\..\install\bin\plugins\FNISToolReset.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\FNISTool
 ;Script Extender Plugin Checker
-Source: "..\..\..\..\install\bin\plugins\ScriptExtenderPluginChecker.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\SEPluginChecker
+Source: "..\..\..\install\bin\plugins\ScriptExtenderPluginChecker.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\SEPluginChecker
 ;DDS Preview
-Source: "..\..\..\..\install\bin\plugins\DDSPreview.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\DDSPreview
+Source: "..\..\..\install\bin\plugins\DDSPreview.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\DDSPreview
 ;Form 43 Checker
-Source: "..\..\..\..\install\bin\plugins\Form43Checker.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\Form43Checker
+Source: "..\..\..\install\bin\plugins\Form43Checker.py"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\Form43Checker
 ;BSA/BA2 Packer
-Source: "..\..\..\..\install\bin\dlls\libbsarch.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: Plugins\BSAPacker
-Source: "..\..\..\..\install\bin\plugins\bsa_packer.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\BSAPacker
+Source: "..\..\..\install\bin\dlls\libbsarch.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: Plugins\BSAPacker
+Source: "..\..\..\install\bin\plugins\bsa_packer.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: Plugins\BSAPacker
 ;Plugins Data
-Source: "..\..\..\..\install\bin\plugins\data\*"; DestDir: "{app}\plugins\data"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Plugins
+Source: "..\..\..\install\bin\plugins\data\*"; DestDir: "{app}\plugins\data"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Plugins
 ;End Plugin Groups
 ;Translations
-Source: "..\..\..\..\install\bin\translations\*"; DestDir: "{app}\translations"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Translations
+Source: "..\..\..\install\bin\translations\*"; DestDir: "{app}\translations"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Translations
 ;Tutorials
-Source: "..\..\..\..\install\bin\tutorials\*"; DestDir: "{app}\tutorials"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Tutorials
+Source: "..\..\..\install\bin\tutorials\*"; DestDir: "{app}\tutorials"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Tutorials
 ;Stylesheets
-Source: "..\..\..\..\install\bin\stylesheets\*"; DestDir: "{app}\stylesheets"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Stylesheets
+Source: "..\..\..\install\bin\stylesheets\*"; DestDir: "{app}\stylesheets"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Stylesheets
 
 [InstallDelete]
 Type: filesandordirs; Name: "{app}/DLLS"
@@ -229,6 +223,7 @@ Type: filesandordirs; Name: "{app}/libffi-*"
 Type: filesandordirs; Name: "{app}/uibase.dll"
 Type: filesandordirs; Name: "{app}/uninstall.exe"
 Type: filesandordirs; Name: "{app}/usvfs_*"
+Type: filesandordirs; Name: "{app}/archive.dll"
 
 ;Only use if release breaks plugins:
 ;Type: filesandordirs; Name: "{app}/plugins"
