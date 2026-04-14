@@ -81,7 +81,7 @@ Name: "Plugins\Form43Checker"; Description: "Form 43 Checker"; Types: Custom Ful
 Name: "Plugins\File"; Description: "File Preview"; Types: Custom Full
 Name: "Plugins\BSAPacker"; Description: "BSA/BA2 Packer"; Types: Custom Full
 Name: "Translations"; Description: "Translations"; Types: Custom Full
-Name: "Tutorials"; Description: "Tutorials"; Types: Custom Full
+;Name: "Tutorials"; Description: "Tutorials"; Types: Custom Full
 Name: "Stylesheets"; Description: "Stylesheets"; Types: Custom Full
 Name: "Exclusions"; Description: "Add Windows Defender Exclusions"; Types: Custom Full
 
@@ -98,13 +98,14 @@ Source: "..\..\..\install\bin\usvfs_proxy_x64.exe"; DestDir: "{app}"; Flags: ign
 Source: "..\..\..\install\bin\usvfs_proxy_x86.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\..\..\install\bin\usvfs_x64.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "..\..\..\install\bin\usvfs_x86.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "..\..\..\install\bin\loot\loot.dll"; DestDir: "{app}\loot"; Flags: ignoreversion; Components: core
+Source: "..\..\..\install\bin\loot\libloot.dll"; DestDir: "{app}\loot"; Flags: ignoreversion; Components: core
 Source: "..\..\..\install\bin\loot\lootcli.exe"; DestDir: "{app}\loot"; Flags: ignoreversion; Components: core
 Source: "..\..\..\install\bin\plugins\bsa_extractor.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
 Source: "..\..\..\install\bin\plugins\diagnose_basic.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
 Source: "..\..\..\install\bin\plugins\inibakery.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
 Source: "..\..\..\install\bin\plugins\installer_bundle.dll"; DestDir: "{app}\plugins"; Flags: ignoreversion; Components: core
 Source: "..\..\..\install\bin\licenses\*"; DestDir: "{app}\licenses"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
+Source: "..\..\..\install\bin\qml\QML\*"; DestDir: "{app}\qml\QML"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
 Source: "..\..\..\install\bin\qml\QtQml\*"; DestDir: "{app}\qml\QtQml"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
 Source: "..\..\..\install\bin\qml\QtQuick\*"; DestDir: "{app}\qml\QtQuick"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
 Source: "..\..\..\install\bin\platforms\*"; DestDir: "{app}\platforms"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: core
@@ -120,6 +121,7 @@ Source: "..\..\..\install\bin\dlls\dlls.manifest"; DestDir: "{app}\dlls"; Flags:
 Source: "..\..\..\install\bin\dlls\opengl32sw.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
 Source: "..\..\..\install\bin\dlls\dxcompiler.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
 Source: "..\..\..\install\bin\dlls\dxil.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
+Source: "..\..\..\install\bin\dlls\icuuc.dll"; DestDir: "{app}\dlls"; Flags: ignoreversion; Components: QTDLL
 
 ;Explorer++
 Source: "..\..\..\install\bin\explorer++\*"; DestDir: "{app}\explorer++"; Flags: ignoreversion; Components: FileExplorer
@@ -190,7 +192,7 @@ Source: "..\..\..\install\bin\plugins\data\*"; DestDir: "{app}\plugins\data"; Fl
 ;Translations
 Source: "..\..\..\install\bin\translations\*"; DestDir: "{app}\translations"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Translations
 ;Tutorials
-Source: "..\..\..\install\bin\tutorials\*"; DestDir: "{app}\tutorials"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Tutorials
+;Source: "..\..\..\install\bin\tutorials\*"; DestDir: "{app}\tutorials"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Tutorials
 ;Stylesheets
 Source: "..\..\..\install\bin\stylesheets\*"; DestDir: "{app}\stylesheets"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: Stylesheets
 
